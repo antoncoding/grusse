@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}{{ user.username }} My Profile{% endblock %}
+
+
+{% block content %}
+<div class="container">
+<h2 style="color: black"> Welcome to Grusse,</h2> 
+<h2 style="color: black; padding-left: 30px">{{ request.user.get_full_name }} </h2>
+<br>
+</div>
+
+<div class="row"> <!--picture-->
+	<div class="col-lg-4 col-lg-offset-1">
+		{% if request.user.profile.photo %}
+		<img  style="width: 300px; " src="{{ request.user.profile.photo.url }}"  class="img-rounded" >
+		{% else %}
+		<img style="width:  300px;" src= {% static 'img/default_profile.png' %}  class="rounded" alt="...">
+		{% endif %}
+		<p>
+		<hr>
+		UserID: {{request.user.username}}
+		<br>
+		City: {{request.user.profile.city}}
+		<br>
+		Birthday: {{request.user.profile.birthday|date:"d M Y"}}
+		<br>
+		Mail sent: {{request.user.profile.count_mail}}
+		<br>
+		Friends: {{request.user.profile.count_friend}}
+		<hr>
+		<button style="color: black" type="button" onclick="window.location.href='/profile/update/' ">Edit Profile</button>
+		</p>
+	</div>
+	
+	<div class="col-lg-4"> 
+		
+
+
+	</div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}

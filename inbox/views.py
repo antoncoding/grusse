@@ -5,11 +5,15 @@ from django.template import loader
 from django.http import HttpResponse
 
 # Create your views here.
-def index(request):
-    return HttpResponse("inbox.index .")
+
+def inbox(request):
+    return render(request, 'inbox.html')
+
+def compose(request):
+    return render(request, 'compose.html')
 
 # render Template page
-def template(request):  
-    context = {'name': 'qq'}
-    template = loader.get_template('index.html')
-    return HttpResponse(template.render(context, request))
+# def template(request):  
+#     context = {'name': 'qq'}
+#     template = loader.get_template('index.html')
+#     return HttpResponse(template.render(context, request))

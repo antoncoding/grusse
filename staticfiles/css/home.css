@@ -1,0 +1,17 @@
+hr.red {
+    border-color: #BB3417;
+    border-width: 3px;
+    max-width: 50px;
+}
+
+hr.light {
+  border-color: white;
+}
+
+.bg-primary {
+  background-color: #F05F40;
+}
+.bg-dark {
+  background-color: #AB2F2F;
+  color: white;
+}

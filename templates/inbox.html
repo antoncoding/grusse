@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+
+<div class='col-sm-6 col-sm-offset-3'>
+  <h1> Browse </h1>
+
+  {% for obj in object_list %}
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="thumbnail">
+        {% if obj.image %}
+        <img src='{{ obj.image.url }}' class='img-responsive' />
+        {% endif %}
+        <div class="caption">
+          <h4><small style="padding-right:4px; padding-left:4px">From</small> {{obj.city}}, {{ obj.country }} <small style="padding-right:8px; padding-left:4px">to</small>{{obj.destination_city}}, {{obj.destination_country}}<small style="padding-left: 30;"">{{ obj.date|date:"d M Y"}}   
+            <button style="margin-left: 30px" id="likes" data-id="{{obj.id}}" class="btn btn-mini btn-danger glyphicon glyphicon-heart" type="button">{% if obj.likes > 0 %} {{obj.likes}} {% endif %} </button>
+
+          </h4>
+          <script type="text/javascript">
+            $('button').on('click',function(event){
+              event.preventDefault();
+              var element = $(this);
+              $.ajax({
+                url : '/postcard/like_post/',
+                method: 'GET',
+                data: { 
+                  post_id: element.attr("data-id")},
+                  success: function(response){
+                    element.html(' '+response);
+                  }
+                });
+
+            });
+
+          </script>
+        </div>
+      </div>
+    </div>
+    <hr/>
+  </div>
+  {% endfor %}
+</div>
+{% endblock content %}

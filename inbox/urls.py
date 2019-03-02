@@ -1,7 +1,8 @@
 from django.urls import path
 
-from . import views
+from . views import inbox, compose
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('template/', views.template, name='template' )
+    path('', inbox),
+    path('compose', compose)
+    # path('template/', views.template, name='template' )
 ]

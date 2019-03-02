@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'notifications',
     'users.apps.UsersConfig', # Custom User Model
     'inbox.apps.InboxConfig', # Inbox
+    'django_countries'
 ]
 
 MIDDLEWARE = [

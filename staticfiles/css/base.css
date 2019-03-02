@@ -1,0 +1,93 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
+
+*{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.round {
+                border-radius: 50%;
+                overflow: hidden;
+                width: 150px;
+                height: 150px;
+            }
+            .round img {
+                display: block;
+            /* Stretch 
+                  height: 100%;
+                  width: 100%; */
+            min-width: 100%;
+            min-height: 100%;
+            }
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: black;
+  font-weight: 300;
+}
+body ::-webkit-input-placeholder {
+  /* WebKit browsers */
+  font-family: 'Source Sans Pro', sans-serif;
+  color: black;
+  font-weight: 300;
+}
+body :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  font-family: 'Source Sans Pro', sans-serif;
+  color: black;
+  opacity: 1;
+  font-weight: 300;
+}
+body ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  font-family: 'Source Sans Pro', sans-serif;
+  color: black;
+  opacity: 1;
+  font-weight: 300;
+}
+body :-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  font-family: 'Source Sans Pro', sans-serif;
+  color: black;
+  font-weight: 300;
+}
+
+button {
+  outline: 0;
+  background-color: white;
+  border: 0;
+  padding: 10px 15px;
+  border-radius: 3px;
+  width: 125px;
+  cursor: pointer;
+  font-size: 18px;
+}
+button:hover {
+  background-color: #f5f7f9;
+}
+
+/*form {
+  padding: 20px 0;
+  /*z-index: 2;*/
+}
+form input {
+/*  outline: 0;*/
+  /*border: 1px solid rgba(255, 255, 255, 0.4);*/
+  background-color: white;
+  width: 250px;
+  /*border-radius: 3px;*/
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: black;
+  font-weight: 300;
+}
+form input:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+form input:focus {
+  background-color: white;
+  width: 300px;
+  /*color: #53e3a6;*/
+}*/
